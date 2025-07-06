@@ -14,3 +14,10 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+console.log("The backpack object: ", backpack);
+console.log("The backpack name: ", backpack.name);
+/*Dot notation access Property */
+console.log("The backpack Strap length Left: ", backpack.strapLength.left);
+/*Bracket access Property */
+const props = "volume";
+console.log("The backpack Volume: ", backpack[props]);
