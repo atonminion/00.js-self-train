@@ -21,3 +21,12 @@ console.log("The backpack Strap length Left: ", backpack.strapLength.left);
 /*Bracket access Property */
 const props = "volume";
 console.log("The backpack Volume: ", backpack[props]);
+
+/*Set Strap length by calling method inside object*/
+console.log("Left Length before: ", backpack.strapLength.left);
+console.log("Right Length before: ", backpack.strapLength.right);
+
+backpack.newStrapLength(10, 16);
+
+console.log("Left Length after: ", backpack.strapLength.left);
+console.log("Right Length after ", backpack.strapLength.right);
