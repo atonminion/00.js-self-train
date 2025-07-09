@@ -6,7 +6,8 @@ class Backpack {
     pocketNum,
     strapLengthL,
     strapLengthR,
-    lidOpen
+    lidOpen,
+    dateAcquired
   ) {
     this.name = name;
     this.volume = volume;
@@ -17,6 +18,7 @@ class Backpack {
       strapLengthR: strapLengthR,
     };
     this.lidOpen = lidOpen;
+    this.dateAcquired = dateAcquired;
   }
 
   toggleLid(lidStatus) {
@@ -26,6 +28,12 @@ class Backpack {
   newStrapLength(lengthLeft, lengthRight) {
     this.strapLength.strapLengthL = lengthLeft;
     this.strapLength.strapLengthR = lengthRight;
+  }
+  ageOfBackpack() {
+    const curDate = new Date();
+    const acqDate = new Date(this.dateAcquired);
+    const ageMil = curDate - acqDate;
+    return Math.round(ageMil / (1000 * 3600 * 24));
   }
 }
 
